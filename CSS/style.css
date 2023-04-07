@@ -1,0 +1,19 @@
+* {
+  background-color: black;
+  color: white;
+}
+
+#container {
+  display: flex;
+  font-family: "BhuTuka Expanded One", cursive;
+}
+
+#clock {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  font-size: 256px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
