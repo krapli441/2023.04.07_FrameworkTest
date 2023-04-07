@@ -1,33 +1,16 @@
 import http from "http";
 import fs from "fs";
 
-// const server = http.createServer(function (request, response) {
-//   if ((request.method = "GET")) {
-//     var css = fs.readFileSync("/CSS/style.css" + request.url);
-//     response.writeHead(200, { "Content-Type": "text/css" });
-//     response.write(css);
-//     response.end();
-//     return;
-//   }
-//   var html = fs.readFileSync("../index.html");
-//   response.writeHead(200, { "Content-Type": "text/html" });
-//   response.write(html);
-//   response.end();
-// });
-
-// server.listen(2080, function () {
-//   console.log("Clock is Ticking...");
-// });
-
-// const http = require('http');
-// const fs = require('fs');
-
 const server = http.createServer((req, res) => {
   const url = req.url;
   let filePath = "." + url;
 
   if (filePath === "./") {
-    filePath = "./index.html"; // 기본 파일
+    filePath = "./index.html";
+  }
+
+  if (req.url === "/favicon.ico") {
+    return;
   }
 
   fs.readFile(filePath, (err, data) => {
@@ -47,6 +30,6 @@ const server = http.createServer((req, res) => {
   });
 });
 
-server.listen(2080, () => {
-  console.log("Server is running on port 2080");
+server.listen(3050, () => {
+  console.log("Clock is ticking");
 });
