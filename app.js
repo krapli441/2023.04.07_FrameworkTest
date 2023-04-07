@@ -31,5 +31,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(3050, () => {
-  console.log("Clock is ticking");
+  console.log("Clock is ticking! checkout at http://localhost:3050/");
 });
