@@ -1,4 +1,7 @@
 const clock = document.querySelector("#clock");
+const dateDiv = document.querySelector(".date");
+const timeDiv = document.querySelector(".time");
+const dayDiv = document.querySelector(".day");
 
 let weekend = new Array(7);
 weekend[0] = "Sunday";
@@ -18,9 +21,9 @@ function getTime() {
   const hours = String(time.getHours()).padStart(2, "0");
   const minutes = String(time.getMinutes()).padStart(2, "0");
   const seconds = String(time.getSeconds()).padStart(2, "0");
-  clock.innerText = `${years}.${month}.${date}
-  ${hours}:${minutes}:${seconds}
-  ${day}`;
+  dateDiv.innerHTML = `${years}.${month}.${date}`;
+  timeDiv.innerHTML = `${hours} : ${minutes} : ${seconds}`;
+  dayDiv.innerHTML = `${day}`;
 }
 
 getTime();

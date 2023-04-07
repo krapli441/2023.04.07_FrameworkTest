@@ -1,18 +1,19 @@
-* {
+body {
   background-color: black;
   color: white;
 }
 
 #container {
   display: flex;
-  font-family: "BhuTuka Expanded One", cursive;
+  font-family: "Michroma", sans-serif;
 }
 
 #clock {
   display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
-  font-size: 256px;
+  font-size: 128px;
   align-items: center;
   justify-content: center;
   text-align: center;
